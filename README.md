@@ -58,5 +58,44 @@ To play the game:
 Run the script.
 Enter an integer between 0 and 6 to move a frog, 'q' to quit, 'r' to restart, or 'e' to end the game loop.
 
+# Explanation
+
+**Class:** FrogLeapGame
+
+Description:
+This class represents the Frog Leap Puzzle Game.
+
+**Attributes:**
+
+positions (list): List representing the current positions of frogs and the empty space.
+
+**Methods:**
+
+init(self)
+Description: Initializes the game with the starting positions of frogs. The initial configuration of frogs is ['G', 'G', 'G', '-', 'B', 'B', 'B'].
+
+print_board(self)
+Description: Prints the current state of the game board, displaying the positions of frogs and the empty space.
+
+make_move(self, position)
+Description: Processes the user's move based on the selected frog position.
+
+**Parameters:**
+
+position (int): The position of the selected frog.
+
+check_win(self)
+Description: Checks if the current positions constitute a win.
+
+**Returns:**
+
+bool: True if the game is won, False otherwise.
+
+restart(self)
+Description: Restarts the game with a new initial configuration.
+
+end_game(self)
+Description: Ends the game loop.
+
 # Notes:
 The game is designed for console-based play, providing a simple yet enjoyable environment for solving the Frog Leap Puzzle.
