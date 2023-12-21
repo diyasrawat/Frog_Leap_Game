@@ -60,7 +60,7 @@ Enter an integer between 0 and 6 to move a frog, 'q' to quit, 'r' to restart, or
 
 # Explanation
 
-class FrogLeapGame:
+    class FrogLeapGame:
     """
     Class representing the Frog Leap Puzzle Game.
 
@@ -131,25 +131,6 @@ class FrogLeapGame:
         """
         # Implementation to end the game loop goes here
 
-
-# Example of how the game might be used:
-if __name__ == "__main__":
-    game = FrogLeapGame()
-
-    while True:
-        game.print_board()
-        move = input("Enter the position of the frog to move (or 'q' to quit): ")
-
-        if move == 'q':
-            game.end_game()
-            break
-
-        game.make_move(int(move))
-
-        if game.check_win():
-            game.print_board()
-            print("YOU WIN!")
-            break
 
 # Notes:
 The game is designed for console-based play, providing a simple yet enjoyable environment for solving the Frog Leap Puzzle.
