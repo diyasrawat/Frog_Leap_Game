@@ -60,42 +60,96 @@ Enter an integer between 0 and 6 to move a frog, 'q' to quit, 'r' to restart, or
 
 # Explanation
 
-**Class:** FrogLeapGame
+class FrogLeapGame:
+    """
+    Class representing the Frog Leap Puzzle Game.
 
-Description:
-This class represents the Frog Leap Puzzle Game.
+    Attributes:
+    - positions (list): List representing the current positions of frogs and the empty space.
 
-**Attributes:**
+    Methods:
+    - __init__(self): Initializes the game with the starting positions of frogs.
+    - print_board(self): Prints the current state of the game board.
+    - make_move(self, position): Processes the user's move based on the selected frog position.
+    - check_win(self): Checks if the current positions constitute a win.
+    - restart(self): Restarts the game with a new initial configuration.
+    - end_game(self): Ends the game loop.
 
-positions (list): List representing the current positions of frogs and the empty space.
+    """
 
-**Methods:**
+    def __init__(self):
+        """
+        Initializes the Frog Leap Puzzle Game.
 
-init(self)
-Description: Initializes the game with the starting positions of frogs. The initial configuration of frogs is ['G', 'G', 'G', '-', 'B', 'B', 'B'].
+        The initial configuration of frogs is ['G', 'G', 'G', '-', 'B', 'B', 'B'].
 
-print_board(self)
-Description: Prints the current state of the game board, displaying the positions of frogs and the empty space.
+        """
+        self.positions = ['G', 'G', 'G', '-', 'B', 'B', 'B']
 
-make_move(self, position)
-Description: Processes the user's move based on the selected frog position.
+    def print_board(self):
+        """
+        Prints the current state of the game board.
 
-**Parameters:**
+        Displays the positions of frogs and the empty space.
 
-position (int): The position of the selected frog.
+        """
+        print("[ 0 ,  1 ,  2 ,  3 ,  4 ,  5 ,  6 ]")
+        print(self.positions)
 
-check_win(self)
-Description: Checks if the current positions constitute a win.
+    def make_move(self, position):
+        """
+        Processes the user's move based on the selected frog position.
 
-**Returns:**
+        Parameters:
+        - position (int): The position of the selected frog.
 
-bool: True if the game is won, False otherwise.
+        """
+        # Implementation of frog movement rules and position swapping goes here
 
-restart(self)
-Description: Restarts the game with a new initial configuration.
+    def check_win(self):
+        """
+        Checks if the current positions constitute a win.
 
-end_game(self)
-Description: Ends the game loop.
+        Returns:
+        - bool: True if the game is won, False otherwise.
+
+        """
+        # Implementation to check if the current positions constitute a win goes here
+        return False
+
+    def restart(self):
+        """
+        Restarts the game with a new initial configuration.
+
+        """
+        # Implementation to reset the game to its initial configuration goes here
+
+    def end_game(self):
+        """
+        Ends the game loop.
+
+        """
+        # Implementation to end the game loop goes here
+
+
+# Example of how the game might be used:
+if __name__ == "__main__":
+    game = FrogLeapGame()
+
+    while True:
+        game.print_board()
+        move = input("Enter the position of the frog to move (or 'q' to quit): ")
+
+        if move == 'q':
+            game.end_game()
+            break
+
+        game.make_move(int(move))
+
+        if game.check_win():
+            game.print_board()
+            print("YOU WIN!")
+            break
 
 # Notes:
 The game is designed for console-based play, providing a simple yet enjoyable environment for solving the Frog Leap Puzzle.
