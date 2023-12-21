@@ -3,6 +3,17 @@
 # Overview:
 The Frog Leap Puzzle Game is a Python implementation of a classic console-based puzzle where two sets of frogs, one green and one brown, are placed on opposite sides of a river. The objective is to swap the positions of the green and brown frogs using specific movement rules until they are in the opposite arrangement.
 
+# Game Logic:
+
+**Rules for Winning:**
+The game is won when the frogs are arranged as ['B', 'B', 'B', '-', 'G', 'G', 'G'].
+
+**Rules for Losing:**
+The player loses if they choose to quit the game ('q').
+
+**Rules for Scoring:**
+No scoring is involved; the focus is on solving the puzzle.
+
 # Features:
 Frog Types:
 
